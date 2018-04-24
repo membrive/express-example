@@ -1,0 +1,17 @@
+{
+  "name": "express-example",
+  "version": "1.0.0",
+  "description": "Express API example",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bunyan": "^1.8.12",
+    "express": "^4.16.3",
+    "mongoose": "^5.0.16"
+  },
+  "repository": "https://github.com/membrive/express-example"
+}

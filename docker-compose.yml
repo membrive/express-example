@@ -1,0 +1,32 @@
+
+
+version: "2"
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - PORT=3001
+    ports:
+      - 8888:3001
+    depends_on:
+      - mongodb
+    volumes:
+      - node-logs:/usr/src/app/logs
+    restart: always
+  mongodb:
+    image: mongo:3.6
+    ports:
+      - 55555:27017
+    volumes:
+      - mongodb-data:/data/db
+    restart: always
+
+volumes:
+  mongodb-data:
+  node-logs:
+
+
+
